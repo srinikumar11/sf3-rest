@@ -1,0 +1,10 @@
+services:
+#    bee_cms_api.example:
+#        class: BeeCMS\ApiBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+
+  bee_cms_api.listener.kernel.convert_html:
+    class: BeeCMS\ApiBundle\Event\Listener\DebugApi
+    tags:
+      - { name: kernel.event_listener, event: kernel.response }

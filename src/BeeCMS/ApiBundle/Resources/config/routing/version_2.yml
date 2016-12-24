@@ -1,0 +1,8 @@
+bee_cms_api_homepage_v2:
+    path:     /
+    defaults: { _controller: BeeCMSApiBundle:V2:index }
+
+
+bee_cms_api_homepage_v2_version:
+    path:     /version
+    defaults: { _controller: BeeCMSApiBundle:V2:version }

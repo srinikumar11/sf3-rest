@@ -1,0 +1,7 @@
+bee_cms_api_v1:
+    resource: "@BeeCMSApiBundle/Resources/config/routing/version_1.yml"
+    prefix:   /
+
+bee_cms_api_v2:
+    resource: "@BeeCMSApiBundle/Resources/config/routing/version_2.yml"
+    prefix:   /v2
