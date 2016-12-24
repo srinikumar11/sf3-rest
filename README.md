@@ -1,16 +1,23 @@
-Symfony Standard Edition
-========================
+Symfony 3 Rest API Boiler Plate
+===============================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
-
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+Purpose of this project creation is to make a template/boilerplate for 
+Symfony 3 Rest Api. There was new versioning process for API attached.
+ Each API versions will have its own route. 
+ For example:
+     
+    "/" => will be API version 1 -> actions are in default controller
+    "/v2/" => will be API version 2 -> actions are in V2 controller 
+    
+ New version can be extended from older to reuse old api calls logic.
+ 
+ Additionally Profiler enabled for dev environment. This will be useful for
+ debugging.
 
 What's inside?
 --------------
 
-The Symfony Standard Edition is configured with the following defaults:
+This project consist of:
 
   * An AppBundle you can use to start coding;
 
@@ -52,9 +59,37 @@ It comes pre-configured with the following bundles:
 
   * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
     integration
+    
+  * **FOSRestBundle**
+  
+  * **JMSSerialiserBundle**  
+
+  * **NelmioCorsBundle**
+  
+  
 
 All libraries and bundles included in the Symfony Standard Edition are
 released under the MIT or BSD license.
+
+How to use it?
+--------------
+    *Clone this repo
+
+    *cd to project directory/ cloned folder
+
+    composer install
+
+    php bin/console server:run
+
+    open http://127.0.0.1:8000/ - dev mode
+
+    open http://127.0.0.1:8000/app.php - prod mode*
+API versioning URLs:
+--------------------
+    *http://127.0.0.1:8000/app.php/
+    *http://127.0.0.1:8000/app.php/v2/
+
+
 
 Enjoy!
 
